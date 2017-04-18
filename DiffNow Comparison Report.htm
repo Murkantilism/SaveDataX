@@ -91,11 +91,15 @@ table td, table th {padding: 0;}
     var $scrollTimeout;
     var $diffs = [
 null,
-{d:'Diff 1: Change 1 line (104, first file) to 1 line (104, second file)',l:[103,103]},
-{d:'Diff 2: Change 1 line (108, first file) to 1 line (108, second file)',l:[107,107]},
-{d:'Diff 3: Change 1 line (237, first file) to 1 line (237, second file)',l:[236,236]},
-{d:'Diff 4: Change 1 line (245, first file) to 1 line (245, second file)',l:[244,244]},
-{d:'Diff 5: Change 3 lines (271 - 273, first file) to 6 lines (271 - 276, second file)',l:[270,275]}
+{d:'Diff 1: Change 1 line (101, first file) to 1 line (101, second file)',l:[100,100]},
+{d:'Diff 2: Change 1 line (104, first file) to 1 line (104, second file)',l:[103,103]},
+{d:'Diff 3: Change 1 line (106, first file) to 1 line (106, second file)',l:[105,105]},
+{d:'Diff 4: Change 1 line (108, first file) to 1 line (108, second file)',l:[107,107]},
+{d:'Diff 5: Change 1 line (235, first file) to 1 line (235, second file)',l:[234,234]},
+{d:'Diff 6: Change 1 line (237, first file) to 1 line (237, second file)',l:[236,236]},
+{d:'Diff 7: Change 1 line (240, first file) to 1 line (240, second file)',l:[239,239]},
+{d:'Diff 8: Change 1 line (245, first file) to 4 lines (245 - 248, second file)',l:[244,247]},
+{d:'Diff 9: Change 3 lines (271 - 273, first file) to 8 lines (274 - 281, second file)',l:[273,280]}
 ];
 
     try {
@@ -608,6 +612,9 @@ null,
 <div class="num">243 </div>
 <div class="num">244 </div>
 <div class="num">245 </div>
+<div class="num">    </div>
+<div class="num">    </div>
+<div class="num">    </div>
 <div class="num">246 </div>
 <div class="num">247 </div>
 <div class="num">248 </div>
@@ -634,6 +641,8 @@ null,
 <div class="num">269 </div>
 <div class="num">270 </div>
 <div class="num">271 </div>
+<div class="num">    </div>
+<div class="num">    </div>
 <div class="num">    </div>
 <div class="num">    </div>
 <div class="num">272 </div>
@@ -769,14 +778,14 @@ null,
 <div class="l li"><span class="si">    </span><span class="s1-86">#region PublicStaticFunctions</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s1-89">///     - Loads specified file from streaming assets folder.</span></div>
+<div class="l lc d1"><span class="sc">    ///     - Loads specified file from </span><span class="sc2">streaming</span><span class="sc"> assets folder.</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;/summary&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;param name='fileName'&gt;</span></div>
-<div class="l lc d1"><span class="sc">    ///     - The file to load from Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">.</span></div>
+<div class="l lc d2"><span class="sc">    ///     - The file to load from Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">.</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;/param&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s1-90">public</span><span class="si"> </span><span class="s1-90">static</span><span class="si"> SaveData LoadFromStreamingAssets(</span><span class="s1-90">string</span><span class="si"> fileName)</span></div>
+<div class="l lc d3"><span class="sc">    public static SaveData </span><span class="sc2">LoadFromStreamingAssets</span><span class="sc">(string fileName)</span></div>
 <div class="l li"><span class="si">    {</span></div>
-<div class="l lc d2"><span class="sc">        return Load(Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">+&quot;</span><span class="sc2">\</span><span class="sd">\</span><span class="sc">&quot;+fileName);</span></div>
+<div class="l lc d4"><span class="sc">        return Load(Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">+&quot;</span><span class="sc2">\</span><span class="sd">\</span><span class="sc">&quot;+fileName);</span></div>
 <div class="l li"><span class="si">    }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;summary&gt;</span></div>
@@ -903,17 +912,20 @@ null,
 <div class="l li"><span class="si">    }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s1-89">///     - Saves this instance to the Streaming Assets path.</span></div>
+<div class="l lc d5"><span class="sc">    ///     - Saves this instance to the </span><span class="sc2">Streaming</span><span class="sc"> Assets path.</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;/summary&gt;</span></div>
-<div class="l lc d3"><span class="sc">    public void Save() { Save(Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">+&quot;</span><span class="sc2">\</span><span class="sd">\</span><span class="sc">&quot;+fileName+extension); }</span></div>
+<div class="l lc d6"><span class="sc">    public void Save() { Save(Application.</span><span class="sc2">streamingAssetsPath</span><span class="sc">+&quot;</span><span class="sc2">\</span><span class="sd">\</span><span class="sc">&quot;+fileName+extension); }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s1-89">///     - Saves this instance to the specified path.</span></div>
+<div class="l lc d7"><span class="sc">    ///     - Saves this instance to the specified path.</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;/summary&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;param name='path'&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">///     - Path to save to.</span></div>
 <div class="l li"><span class="si">    </span><span class="s1-89">/// &lt;/param&gt;</span></div>
-<div class="l lc d4"><span class="sc">    public void Save(string path)</span></div>
+<div class="l lc d8"><span class="sc">    </span><span class="sc2">public void Save(string path)</span></div>
+<div class="l lc d8"> </div>
+<div class="l lc d8"> </div>
+<div class="l lc d8"> </div>
 <div class="l li"><span class="si">    {</span></div>
 <div class="l li"><span class="si">        List&lt;System.Type&gt; additionalTypes = </span><span class="s1-90">new</span><span class="si"> List&lt;System.Type&gt;();</span></div>
 <div class="l li"><span class="si">        List&lt;</span><span class="s1-90">string</span><span class="si">&gt; typeNameList = </span><span class="s1-90">new</span><span class="si"> List&lt;</span><span class="s1-90">string</span><span class="si">&gt;();</span></div>
@@ -939,12 +951,14 @@ null,
 <div class="l li"><span class="si">        serializedTypes = typeNameList.ToArray();</span></div>
 <div class="l li"><span class="si">        </span></div>
 <div class="l li"><span class="si">        XmlSerializer serializer = </span><span class="s1-90">new</span><span class="si"> XmlSerializer(</span><span class="s1-90">typeof</span><span class="si">(SaveData), additionalTypes.ToArray());</span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sc2">TextWriter textWriter</span><span class="sc"> = new StreamWriter(path);</span></div>
-<div class="l lc d5"> </div>
-<div class="l lc d5"> </div>
-<div class="l lc d5"><span class="sc">        serializer.Serialize(</span><span class="sc2">textWriter</span><span class="sc">, this);</span></div>
-<div class="l lc d5"> </div>
-<div class="l lc d5"><span class="sc">        </span><span class="sc2">textWriter</span><span class="sc">.Close(); </span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sc2">TextWriter</span><span class="sc"> </span><span class="sd">textWriter = new StreamWriter</span><span class="sc">(</span><span class="sc2">path</span><span class="sc">)</span><span class="sd">;</span></div>
+<div class="l lc d9"> </div>
+<div class="l lc d9"> </div>
+<div class="l lc d9"> </div>
+<div class="l lc d9"> </div>
+<div class="l lc d9"><span class="sc">        serializer.Serialize(</span><span class="sc2">textWriter</span><span class="sc">, this);</span></div>
+<div class="l lc d9"> </div>
+<div class="l lc d9"><span class="sc">        </span><span class="sc2">textWriter</span><span class="sc">.Close(); </span></div>
 <div class="l li"><span class="si">        </span></div>
 <div class="l li"><span class="si">        serializedData = </span><span class="s1-90">null</span><span class="si">;</span></div>
 <div class="l li"><span class="si">        serializedTypes = </span><span class="s1-90">null</span><span class="si">;</span></div>
@@ -1290,6 +1304,11 @@ null,
 <div class="num">301 </div>
 <div class="num">302 </div>
 <div class="num">303 </div>
+<div class="num">304 </div>
+<div class="num">305 </div>
+<div class="num">306 </div>
+<div class="num">307 </div>
+<div class="num">308 </div>
 
                         </td>
                         <td class="content">
@@ -1393,14 +1412,14 @@ null,
 <div class="l li"><span class="si">    </span><span class="s2-86">#region PublicStaticFunctions</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s2-89">///     - Loads specified file from streaming assets folder.</span></div>
+<div class="l lc d1"><span class="sc">    ///     - Loads specified file from </span><span class="sc2">persistent</span><span class="sc"> assets folder.</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;/summary&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;param name='fileName'&gt;</span></div>
-<div class="l lc d1"><span class="sc">    ///     - The file to load from Application.</span><span class="sc2">persistentDataPath</span><span class="sc">.</span></div>
+<div class="l lc d2"><span class="sc">    ///     - The file to load from Application.</span><span class="sc2">persistentDataPath</span><span class="sc">.</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;/param&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s2-90">public</span><span class="si"> </span><span class="s2-90">static</span><span class="si"> SaveData LoadFromStreamingAssets(</span><span class="s2-90">string</span><span class="si"> fileName)</span></div>
+<div class="l lc d3"><span class="sc">    public static SaveData </span><span class="sc2">LoadFromPersistentAssets</span><span class="sc">(string fileName)</span></div>
 <div class="l li"><span class="si">    {</span></div>
-<div class="l lc d2"><span class="sc">        return Load(Application.</span><span class="sc2">persistentDataPath</span><span class="sc"> + &quot;</span><span class="sc2">/</span><span class="sc">&quot;+fileName);</span></div>
+<div class="l lc d4"><span class="sc">        return Load(Application.</span><span class="sc2">persistentDataPath</span><span class="sc"> + &quot;</span><span class="sc2">/</span><span class="sc">&quot;+fileName);</span></div>
 <div class="l li"><span class="si">    }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;summary&gt;</span></div>
@@ -1527,17 +1546,20 @@ null,
 <div class="l li"><span class="si">    }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s2-89">///     - Saves this instance to the Streaming Assets path.</span></div>
+<div class="l lc d5"><span class="sc">    ///     - Saves this instance to the </span><span class="sc2">Persistent</span><span class="sc"> Assets path.</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;/summary&gt;</span></div>
-<div class="l lc d3"><span class="sc">    public void Save() { Save(Application.</span><span class="sc2">persistentDataPath</span><span class="sc"> + &quot;</span><span class="sc2">/</span><span class="sc">&quot;+fileName+extension</span><span class="sa">, System.Text.Encoding.UTF8</span><span class="sc">); }</span></div>
+<div class="l lc d6"><span class="sc">    public void Save() { Save(Application.</span><span class="sc2">persistentDataPath</span><span class="sc"> + &quot;</span><span class="sc2">/</span><span class="sc">&quot;+fileName+extension</span><span class="sa">, System.Text.Encoding.UTF8</span><span class="sc">); }</span></div>
 <div class="l li"><span class="si">    </span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;summary&gt;</span></div>
-<div class="l li"><span class="si">    </span><span class="s2-89">///     - Saves this instance to the specified path.</span></div>
+<div class="l lc d7"><span class="sc">    ///     - Saves this instance to the specified path </span><span class="sa">using specified encoding</span><span class="sc">.</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;/summary&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;param name='path'&gt;</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">///     - Path to save to.</span></div>
 <div class="l li"><span class="si">    </span><span class="s2-89">/// &lt;/param&gt;</span></div>
-<div class="l lc d4"><span class="sc">    public void Save(string path</span><span class="sa">, System.Text.Encoding encoding</span><span class="sc">)</span></div>
+<div class="l lc d8"><span class="sc">    </span><span class="sc2">/// &lt;param name=</span><span class="sa">&quot;encoding&quot;&gt;</span></div>
+<div class="l lc d8"><span class="sc">    </span><span class="sa">///     - Encoding to save with.</span></div>
+<div class="l lc d8"><span class="sc">    </span><span class="sa">/// &lt;/param&gt;</span></div>
+<div class="l lc d8"><span class="sc">    </span><span class="sa">public void Save(string path, System.Text.Encoding encoding)</span></div>
 <div class="l li"><span class="si">    {</span></div>
 <div class="l li"><span class="si">        List&lt;System.Type&gt; additionalTypes = </span><span class="s2-90">new</span><span class="si"> List&lt;System.Type&gt;();</span></div>
 <div class="l li"><span class="si">        List&lt;</span><span class="s2-90">string</span><span class="si">&gt; typeNameList = </span><span class="s2-90">new</span><span class="si"> List&lt;</span><span class="s2-90">string</span><span class="si">&gt;();</span></div>
@@ -1563,12 +1585,14 @@ null,
 <div class="l li"><span class="si">        serializedTypes = typeNameList.ToArray();</span></div>
 <div class="l li"><span class="si">        </span></div>
 <div class="l li"><span class="si">        XmlSerializer serializer = </span><span class="s2-90">new</span><span class="si"> XmlSerializer(</span><span class="s2-90">typeof</span><span class="si">(SaveData), additionalTypes.ToArray());</span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sc2">StreamWriter writer</span><span class="sc"> = new StreamWriter(path</span><span class="sa">, false, encoding</span><span class="sc">);</span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sa">using (writer)</span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sa">{</span></div>
-<div class="l lc d5"><span class="sc">            serializer.Serialize(</span><span class="sc2">writer</span><span class="sc">, this);</span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sa">}</span><span class="sc">   </span></div>
-<div class="l lc d5"><span class="sc">        </span><span class="sc2">writer</span><span class="sc">.Close(); </span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sc2">if</span><span class="sc"> (</span><span class="sc2">encoding</span><span class="sc"> </span><span class="sa">== null</span><span class="sc">)</span></div>
+<div class="l lc d9"><span class="sc">            </span><span class="sa">encoding = System.Text.Encoding.UTF8;</span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sa">StreamWriter writer = new StreamWriter(path, false, encoding);</span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sa">using (writer)</span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sa">{</span></div>
+<div class="l lc d9"><span class="sc">            serializer.Serialize(</span><span class="sc2">writer</span><span class="sc">, this);</span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sa">}</span><span class="sc">   </span></div>
+<div class="l lc d9"><span class="sc">        </span><span class="sc2">writer</span><span class="sc">.Close(); </span></div>
 <div class="l li"><span class="si">        </span></div>
 <div class="l li"><span class="si">        serializedData = </span><span class="s2-90">null</span><span class="si">;</span></div>
 <div class="l li"><span class="si">        serializedTypes = </span><span class="s2-90">null</span><span class="si">;</span></div>
@@ -1634,11 +1658,11 @@ null,
     </div>
 
     <div id="legend">
-        <div id="numDiffs"><b>5 differences</b>: 10 lines, 16 inline differences in 10 changed lines</div><div id="colors"><div class="sa" title="Added lines: 0, inline additions in changed lines: 6">Added(0,6)</div><div class="sd" title="Deleted lines: 0, inline deletions in changed lines: 2">Deleted(0,2)</div><div class="sc" title="Changed lines: 10">Changed(10)</div><div class="sc2" title="Inline changes in changed lines: 8">Changed in changed(8)</div><div class="sig" title="Ignored lines and line parts">Ignored</div></div>
+        <div id="numDiffs"><b>9 differences</b>: 19 lines, 29 inline differences in 19 changed lines</div><div id="colors"><div class="sa" title="Added lines: 0, inline additions in changed lines: 12">Added(0,12)</div><div class="sd" title="Deleted lines: 0, inline deletions in changed lines: 4">Deleted(0,4)</div><div class="sc" title="Changed lines: 19">Changed(19)</div><div class="sc2" title="Inline changes in changed lines: 13">Changed in changed(13)</div><div class="sig" title="Ignored lines and line parts">Ignored</div></div>
     </div>
 
     <div id="generated_by">
-        Generated on April 17, 2017, 8:37 PM by <a href="http://www.prestosoft.com/edp_examdiffpro.asp?ref=diffreport" target="_blank">ExamDiff Pro</a> 9.0.0.13.
+        Generated on April 17, 2017, 8:43 PM by <a href="http://www.prestosoft.com/edp_examdiffpro.asp?ref=diffreport" target="_blank">ExamDiff Pro</a> 9.0.0.13.
     </div>
 </div>
 </body>

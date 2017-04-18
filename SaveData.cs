@@ -98,12 +98,12 @@ public class SaveData
 	#region PublicStaticFunctions
 	
 	/// <summary>
-	/// 	- Loads specified file from streaming assets folder.
+	/// 	- Loads specified file from persistent assets folder.
 	/// </summary>
 	/// <param name='fileName'>
 	/// 	- The file to load from Application.persistentDataPath.
 	/// </param>
-	public static SaveData LoadFromStreamingAssets(string fileName)
+	public static SaveData LoadFromPersistentAssets(string fileName)
 	{
 		return Load(Application.persistentDataPath + "/"+fileName);
 	}
@@ -232,16 +232,19 @@ public class SaveData
 	}
 	
 	/// <summary>
-	/// 	- Saves this instance to the Streaming Assets path.
+	/// 	- Saves this instance to the Persistent Assets path.
 	/// </summary>
 	public void Save() { Save(Application.persistentDataPath + "/"+fileName+extension, System.Text.Encoding.UTF8); }
 	
 	/// <summary>
-	/// 	- Saves this instance to the specified path.
+	/// 	- Saves this instance to the specified path using specified encoding.
 	/// </summary>
 	/// <param name='path'>
 	/// 	- Path to save to.
 	/// </param>
+    /// <param name="encoding">
+    ///     - Encoding to save with.
+    /// </param>
 	public void Save(string path, System.Text.Encoding encoding)
 	{
 		List<System.Type> additionalTypes = new List<System.Type>();
@@ -268,6 +271,8 @@ public class SaveData
 		serializedTypes = typeNameList.ToArray();
 		
 		XmlSerializer serializer = new XmlSerializer(typeof(SaveData), additionalTypes.ToArray());
+        if (encoding == null)
+            encoding = System.Text.Encoding.UTF8;
         StreamWriter writer = new StreamWriter(path, false, encoding);
         using (writer)
         {
